@@ -37,10 +37,6 @@ HslColor rgbToHsl(
   return HslColor(h: h, s: s, l: l);
 }
 
-Color hslToColor(HslColor hsl) {
-  return hslToRgb(hsl);
-}
-
 Color hslToRgb(HslColor hsl) {
   double r;
   double g;
