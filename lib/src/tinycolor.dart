@@ -112,7 +112,7 @@ class TinyColor {
   TinyColor desaturate([int amount = 10]) {
     final hsl = this.toHsl();
     final saturation = clamp01(hsl.saturation - amount / 100);
-    return TinyColor.fromHSL(hsl);
+    return TinyColor.fromHSL(hsl.withSaturation(saturation));
   }
 
   TinyColor saturate([int amount = 10]) {
