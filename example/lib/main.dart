@@ -1,7 +1,7 @@
 import 'package:example/widgets/apply_method_item.dart';
 import 'package:example/widgets/color_chooser.dart';
 import 'package:flutter/material.dart';
-import 'package:tinycolor2/tinycolor.dart';
+import 'package:tinycolor2/tinycolor2.dart';
 
 void main() {
   runApp(TinyColorApp());
