@@ -32,20 +32,22 @@ class _ApplyMethodItemState extends State<ApplyMethodItem> {
     return Row(
       children: [
         Expanded(
-            child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-          child: TextField(
-            decoration:
-                InputDecoration(hintText: widget.defaultValue.toString()),
-            onChanged: (value) =>
-                _value = num.tryParse(value) ?? widget.defaultValue,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: TextField(
+              decoration:
+                  InputDecoration(hintText: widget.defaultValue.toString()),
+              onChanged: (value) =>
+                  _value = num.tryParse(value) ?? widget.defaultValue,
+            ),
           ),
-        )),
+        ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: ElevatedButton(
-              child: Text("Apply ${widget.name}"),
-              onPressed: () => widget.onButtonPressed(_value)),
+            child: Text("Apply ${widget.name}"),
+            onPressed: () => widget.onButtonPressed(_value),
+          ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
