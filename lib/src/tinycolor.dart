@@ -51,7 +51,7 @@ class TinyColor {
     return this;
   }
 
-  HSVColor toHsv() => colorToHsv(_color);
+  HSVColor toHsv() => HSVColor.fromColor(_color);
 
   HslColor toHsl() {
     final hsl = rgbToHsl(
