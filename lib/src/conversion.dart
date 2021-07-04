@@ -67,16 +67,12 @@ Color hslToRgb(HslColor hsl) {
   );
 }
 
-HSVColor colorToHsv(Color color) => HSVColor.fromColor(color);
-
 HSVColor rgbToHsv({
   @required int r,
   @required int g,
   @required int b,
   @required int a,
-}) => colorToHsv(Color.fromARGB(a, r, g, b));
-
-Color hsvToColor(HSVColor hsv) => hsv.toColor();
+}) => HSVColor.fromColor(Color.fromARGB(a, r, g, b));
 
 double _hue2rgb(double p, double q, double t) {
   if (t < 0) t += 1;
