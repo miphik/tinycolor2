@@ -13,7 +13,7 @@ class TinyColor {
   Color _color;
 
   TinyColor(Color color)
-      : this.originalColor = color,
+      : originalColor = color,
         _color = color.clone();
 
   factory TinyColor.fromRGB({
@@ -68,7 +68,7 @@ class TinyColor {
   TinyColor clone() => TinyColor(_color);
 
   TinyColor lighten([int amount = 10]) {
-    final hsl = this.toHsl();
+    final hsl = toHsl();
     hsl.l += amount / 100;
     hsl.l = clamp01(hsl.l);
     return TinyColor.fromHSL(hsl);
@@ -161,7 +161,5 @@ class TinyColor {
 }
 
 extension _ on Color {
-  Color clone() {
-    return Color.fromARGB(alpha, red, green, blue);
-  }
+  Color clone() => Color.fromARGB(alpha, red, green, blue);
 }
