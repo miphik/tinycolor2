@@ -5,9 +5,9 @@ class HslColor {
   double a;
 
   HslColor({
-    @required this.h,
-    @required this.s,
-    @required this.l,
+    required this.h,
+    required this.s,
+    required this.l,
     this.a = 0.0,
   });
 

@@ -2,15 +2,14 @@ import 'dart:math' as Math;
 import 'dart:ui';
 
 import 'package:flutter/painting.dart';
-import 'package:meta/meta.dart';
 
 import 'hsl_color.dart';
 import 'util.dart';
 
 HslColor rgbToHsl({
-  @required double r,
-  @required double g,
-  @required double b,
+  required double r,
+  required double g,
+  required double b,
 }) {
   r = bound01(r, 255.0);
   g = bound01(g, 255.0);
@@ -68,10 +67,10 @@ Color hslToRgb(HslColor hsl) {
 }
 
 HSVColor rgbToHsv({
-  @required int r,
-  @required int g,
-  @required int b,
-  @required int a,
+  required int r,
+  required int g,
+  required int b,
+  required int a,
 }) => HSVColor.fromColor(Color.fromARGB(a, r, g, b));
 
 double _hue2rgb(double p, double q, double t) {
