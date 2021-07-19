@@ -1,4 +1,4 @@
-import 'package:flutter/painting.dart';
+import 'package:flutter/painting.dart' show Color, HSLColor, HSVColor;
 import 'tinycolor.dart';
 
 /// Extends the Color class to allow direct TinyColor manipulation natively
